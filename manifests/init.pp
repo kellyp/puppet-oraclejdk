@@ -20,9 +20,9 @@ class oraclejdk {
     unless  => '/bin/rpm -q jdk',
   }
 
-$str = "PATH=/usr/java/default/bin:$PATH
+$str = "
 JAVA_HOME=/usr/java/default
-export PATH JAVA_HOME
+export JAVA_HOME
         "
 
   file { '/etc/profile.d/java.sh':
