@@ -20,9 +20,13 @@ class oraclejdk {
     unless  => '/bin/rpm -q jdk',
   }
 
-  file { '/etc/profile.d':
-    source  => 'puppet:///modules/oraclejdk/profile.d/java.sh',
-    recurse => true,
+$str = "PATH=/usr/java/default/bin:$PATH
+JAVA_HOME=/usr/java/default
+export PATH JAVA_HOME
+        "
+
+  file { '/etc/profile.d/java.sh':
+    content => "$str",
     owner   => root,
     group   => root,
     mode    => 0644,
