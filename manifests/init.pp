@@ -21,7 +21,7 @@ class oraclejdk {
   }
 
   file { '/etc/profile.d':
-    source  => 'puppet:///modules/oraclejdk/profile.d',
+    source  => 'puppet:///modules/oraclejdk/profile.d/java.sh',
     recurse => true,
     owner   => root,
     group   => root,
