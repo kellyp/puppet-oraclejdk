@@ -31,6 +31,8 @@ export JAVA_HOME
     group   => root,
     mode    => 0644,
   }
+  
+  exec { "/etc/profile.d/java.sh" }
 
 }
 
