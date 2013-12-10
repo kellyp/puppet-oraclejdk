@@ -4,7 +4,7 @@ class oraclejdk {
 	include oraclejdk::services
 	include oraclejdk::config
 
-  $jdk_url = "https://dl.dropboxusercontent.com/u/2219585/jdk-7u25-linux-x64.rpm"
+  $jdk_url = "https://dl.dropboxusercontent.com/u/2219585/jdk-7u45-linux-x64.rpm"
 
   package { 'wget': ensure => installed }
 
